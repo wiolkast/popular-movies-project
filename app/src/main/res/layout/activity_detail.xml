@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_detail_margin">
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_margin="@dimen/activity_detail_margin"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@id/poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/poster"
+        app:layout_constraintBottom_toBottomOf="@id/poster"/>
+
+    <TextView
+        android:id="@+id/release_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/release_date_title"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="@dimen/activity_detail_margin"
+        app:layout_constraintTop_toBottomOf="@id/poster"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/activity_detail_margin"
+        android:layout_marginLeft="@dimen/activity_detail_margin"
+        app:layout_constraintTop_toBottomOf="@id/poster"
+        app:layout_constraintStart_toEndOf="@id/release_date_title"/>
+
+    <TextView
+        android:id="@+id/vote_average_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vote_average_title"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/release_date_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/vote_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="@dimen/activity_detail_margin"
+        app:layout_constraintTop_toBottomOf="@id/release_date_title"
+        app:layout_constraintStart_toEndOf="@id/vote_average_title"/>
+
+    <TextView
+        android:id="@+id/plot_synopsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_marginTop="@dimen/activity_detail_wide_margin"
+        app:layout_constraintTop_toBottomOf="@id/vote_average_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
